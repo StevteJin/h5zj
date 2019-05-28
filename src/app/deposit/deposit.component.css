@@ -116,6 +116,15 @@
   background: url(../../assets/images/deposit_bg.png);
   background-size: 100%;
   padding: 28px;
+  position: relative;
+}
+
+.multiple-div .multiple-item .strategy-search {
+  position: absolute;
+  top: 57px;
+  right: 0;
+  width: 47px;
+  height: 48px;
 }
 
 .multiple-div .multiple-item .title {
