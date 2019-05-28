@@ -1,18 +1,18 @@
 <div class="navigation">
-  <p class="navigation-title">众乐科技—模拟</p>
+    <p class="navigation-title">众乐科技—模拟</p>
 </div>
 <div class="index-page">
-  <!--原轮播图位置 start-->
-  <!-- <div class="swiper-container">
+    <!--原轮播图位置 start-->
+    <!-- <div class="swiper-container">
     <div class="swiper-wrapper">
       <div class="swiper-slide"><img src="./assets/images/banner.jpg" alt=""></div>
       <div class="swiper-slide"><img src="./assets/images/banner2.jpg" alt=""></div>
     </div>
     <div class="swiper-pagination"></div>
   </div> -->
-  <!--原轮播图位置 end-->
-  <!--原本被注释掉的 start-->
-  <!-- <div class="tabs">
+    <!--原轮播图位置 end-->
+    <!--原本被注释掉的 start-->
+    <!-- <div class="tabs">
     <div class="tabs-div " (click)='goto2("zixuan")'>
       <div class=" tab-icon" alt=""></div>
       <p>
@@ -38,98 +38,45 @@
       </p>
     </div>
   </div> -->
-  <!--原本被注释掉的 end-->
-  <div class="topbanner">
-    <img src="./assets/images/indexbanner1.png" alt="">
-  </div>
-  <div class="tabs">
-    <div class="tabs-div2 " *ngFor="let item of list">
-      <p>{{item.lastPrice}}</p>
-      <p [class]="color(item.upRatio)">{{item.preClosePrice}}</p>
-      <p [class]="color(item.upRatio)">{{item.upRatio}}</p>
-      <p>{{item.stockName}}</p>
+    <!--原本被注释掉的 end-->
+    <div class="topbanner">
+        <img src="./assets/images/indexbanner1.png" alt="">
     </div>
-  </div>
-  <div class="news">
-    <div class="news-title">
-      <!-- <img src="./assets/images/zixun.gif" alt=""> -->
-      <img src="./assets/images/huo.png" alt="">
-      <span>重磅资讯：</span>
+    <div class="tabs">
+        <div class="tabs-div2 " *ngFor="let item of list">
+            <p>{{item.lastPrice}}</p>
+            <p [class]="color(item.upRatio)">{{item.preClosePrice}}</p>
+            <p [class]="color(item.upRatio)">{{item.upRatio}}</p>
+            <p>{{item.stockName}}</p>
+        </div>
     </div>
-    <div class="news-content" *ngFor="let item of newslist" (click)='goto2(item.id)'>
-      <p class="content-title">
-        {{item.title}}
-      </p>
-      <p class="content-info">
-        <span>
+    <div class="news">
+        <div class="news-title">
+            <!-- <img src="./assets/images/zixun.gif" alt=""> -->
+            <img src="./assets/images/huo.png" alt="">
+            <span>重磅资讯：</span>
+        </div>
+        <div class="news-content" *ngFor="let item of newslist" (click)='goto2(item.id)'>
+            <p class="content-title">
+                {{item.title}}
+            </p>
+            <p class="content-info">
+                <span>
           {{item.createTime}}
         </span>
-      </p>
-    </div>
-  </div>
-  <div class="new-zixun">
-    <div class="zixun-box" *ngFor="let item of detail">
-      <div class="bigtitle">&nbsp;&nbsp;&nbsp;{{item.text1}}</div>
-      <img class="bgbanner" src="{{item.img}}" alt="">
-      <div class="zixun-num">{{item.money}}</div>
-      <div class="zixun-content1">
-        <div class="zixun1">{{item.date}}利息
-          <span class="{{item.style}}">
-            <span class="bigmoney">{{item.money}}</span>¥</span>&nbsp;元!</div>
-        <div class="zixun2">{{item.amount}}元起</div>
-        <div class="{{item.btns}}" (click)='goto(item.id)'>
-          立即申请
+            </p>
         </div>
-      </div>
     </div>
-  </div>
-  <!-- <div class="newsbox">
-    <div class="newstitle">&nbsp;&nbsp;&nbsp;新闻</div>
-    <div class="newstitlebox">
-      <div *ngFor="let item of newsTitle" [class]="item.id==newsId?'active-title':''" (click)='getNewsContent(item.id)'>
-        {{item.title}}
-      </div>
-    </div>
-    <div class="newscontent">
-      <div *ngFor="let item of newsContent" class="newscontentbox">
-        <img src="{{item.img}}" alt="">
-        <div class="right-content">
-          <div class="right-title">{{item.title}}</div>
-          <div class="right-time">{{item.createTime}}</div>
+    <div class="new-zixun">
+        <div class="zixun-box" *ngFor="let item of detail">
+            <img class="bgbanner" src="{{item.img}}" alt="">
+            <div class="zixun-content1">
+                <div class="zixun1">我要操盘!</div>
+                <div class="zixun2"><span>{{item.amount}}</span>元起</div>
+                <div class="{{item.btns}}" (click)='goto(item.id)'>
+                    立即申请
+                </div>
+            </div>
         </div>
-      </div>
-      <div>
-        <span (click)='getPage(item)' *ngFor="let item of pageNum" style="float: left;background-color:#fff;color:#666666;width:40px;margin-right:10px;text-align: center;">{{item}}</span>
-      </div>
     </div>
-  </div> -->
-  <!--原资讯 start-->
-  <!-- <div class="zixun">
-    <div class='zixun-title'>
-      <span *ngFor="let item of title" (click)='selectType(item.id)' [class]="item.id === type?'red':''">{{item.text}}</span>
-    </div>
-    <div class='zixun-content'>
-      <p class='p-first'>
-        资金：
-        <span class='red'>{{detail[type].amount}}</span>
-        <span style='margin-right:30px;'>元起</span>
-        倍数：最高
-        <span class='red'>{{maxMul}}</span>
-        <span>倍</span>
-      </p>
-      <p class='p-second'>
-        3分钟开户，自动延期
-      </p>
-      <p class='p-second'>
-        3分钟开户，{{detail[type].date}}利息
-        <span class='red'>{{detail[type].money}}</span>{{detail[type].money2}}起
-      </p>
-      <p class='p-second'>
-        自动延期
-      </p>
-      <a (click)='goto(type)'>立即申请</a>
-    </div>
-  </div> -->
-  <!--原资讯 end-->
 </div>
-

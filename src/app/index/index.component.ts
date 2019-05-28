@@ -13,16 +13,16 @@ export class IndexComponent implements OnInit, OnDestroy {
   timeout: any;
   newslist: any;
   type = 0;
-  title = [{
-    id: 0,
-    text: '日进斗金'
-  }, {
-    id: 1,
-    text: '周周有余'
-  }, {
-    id: 2,
-    text: '月中折桂'
-  }];
+  // title = [{
+  //   id: 0,
+  //   text: '日进斗金'
+  // }, {
+  //   id: 1,
+  //   text: '周周有余'
+  // }, {
+  //   id: 2,
+  //   text: '月中折桂'
+  // }];
   detail = [{
     img: './assets/images/banner1.png',
     btn: './assets/images/btn1.png',
@@ -37,34 +37,6 @@ export class IndexComponent implements OnInit, OnDestroy {
     style: 'span1',
     btns: 'btn1',
     text1: '日进斗金'
-  }, {
-    img: './assets/images/banner2.png',
-    btn: './assets/images/btn2.png',
-    id: 1,
-    num: 'NO.2',
-    amount: '1000',
-    multiple: '8',
-    date: '周',
-    money: '14.4',
-    money2: '元',
-    text: '5个交易日',
-    style: 'span2',
-    btns: 'btn2',
-    text1: '周周有余'
-  }, {
-    img: './assets/images/banner3.png',
-    btn: './assets/images/btn3.png',
-    id: 2,
-    num: 'NO.3',
-    amount: '1000',
-    multiple: '8',
-    date: '月',
-    money: '60',
-    money2: '元',
-    text: '一个月',
-    style: 'span3',
-    btns: 'btn3',
-    text1: '月中折桂'
   }];
   maxMul: 0;
   minMul: 0;
