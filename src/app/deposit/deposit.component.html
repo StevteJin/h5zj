@@ -10,14 +10,14 @@
     </p>
   </div>
 </div> -->
-<div class="strategy-tabs">
+<!-- <div class="strategy-tabs">
   <div *ngFor="let item of typeList" (click)='selectType(item.id,item.money)' [class]="item.id==type?'tabsActive':'tabsbox'">
     <div class="num">{{item.num}}</div>
     <div class="interest">{{item.date}}利息{{item.money}}元</div>
     <div class="amount-num">{{item.amount}}元起</div>
     <div>—</div>
   </div>
-</div>
+</div> -->
 <div class="zixuan-content">
   <div class="tabs2">
     <div (click)='tabs = 0' [class]="tabs == 0?'tabs2-active':''">
@@ -38,16 +38,18 @@
       <button (click)='add(true)'>增配</button>
       <button (click)='add(false)'>非增配</button>
     </div>
-    <p class='p-first'>
+    <!-- <p class='p-first'>
       请选择杠杆
-    </p>
+    </p> -->
     <div class='multiple-div {{detail.length == 1?"singleDiv":""}}'>
-      <div (click)='goto(item.id,item.mul,item.financeFeeRate)' [class]="mulType == item.mul?'multiple-active':''"
-        *ngFor="let item of detail">
-        <span class="multiple-box">{{item.mul}}<span class="several-times">&nbsp;倍</span></span>
-        <p>{{amount(item.mul)}}万元</p>
-        <p>{{manageFeeFn(item.mul,item.financeFeeRate)}}元/{{dateType[type]}}</p>
-      </div>
+      <ng-container *ngFor="let item of detail">
+        <div *ngIf="item.mul == 3" (click)='goto(item.id,item.mul,item.financeFeeRate)' class="multiple-item" [ngClass]="mulType == item.mul?'multiple-active':''">
+          <div class="title">放大倍数</div>
+          <span class="multiple-box">{{item.mul}}<span class="several-times">&nbsp;倍</span></span>
+          <p>{{amount(item.mul)}} <span class="multiple-unit">万元</span></p>
+          <p>{{manageFeeFn(item.mul,item.financeFeeRate)}} <span class="multiple-unit">元/{{dateType[type]}}</span></p>
+        </div>
+      </ng-container>
     </div>
     <!-- <button *ngIf="userInfo.allottedScale !== '0'" class='submit' (click)='submit()'>
       结案

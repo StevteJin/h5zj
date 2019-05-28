@@ -56,7 +56,7 @@ export class DepositComponent implements OnInit, OnDestroy {
     amount: 1000
   }];
   type = 0;
-  mulType = 8;
+  mulType = 3;
   detail = [];
   tabs = 0;
   public userInfo: DataService['userInfo'];
@@ -102,7 +102,7 @@ export class DepositComponent implements OnInit, OnDestroy {
       }
       this.finance();
       if (this.userInfo.allottedScale === '0') {
-        this.mulType = this.detail[0].mul;
+        this.mulType = this.detail[3].mul;
       } else {
         this.mulType = this.userInfo.financeRatio;
       }
@@ -118,7 +118,7 @@ export class DepositComponent implements OnInit, OnDestroy {
     this.financeData.forEach((element, index) => {
       this.detail.push({ id: index, mul: element['financeRatio'], financeFeeRate: element['financeFeeRate'] });
     });
-    this.mulType = this.detail[0].mul;
+    this.mulType = this.detail[3].mul;
   }
 
 
@@ -228,7 +228,7 @@ export class DepositComponent implements OnInit, OnDestroy {
         this.money = JSON.parse(this.data.getSession('strategyData')).money || this.userInfo.cashScale;
       } else {
         this.type = this.data.getSession('zixuanId') || 0;
-        this.mulType = 8;
+        this.mulType = 3;
         this.money = JSON.parse(this.data.getSession('strategyData')).money || 1000;
       }
 

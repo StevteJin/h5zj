@@ -31,6 +31,7 @@
 .zixuan-content {
   background: #fff;
   padding-top: 6px;
+  height: calc(100vh - 44px);;
 }
 
 .zixuan-content .tabs2 {
@@ -64,9 +65,8 @@
 
 .zixuan-content .money {
   text-align: center;
-  padding: 5px 10px;
-  margin: 15px;
-  margin-top: 0;
+  padding: 35px 10px;
+  margin: 0 15px;
 }
 
 .zixuan-content .money p {
@@ -77,7 +77,7 @@
 .zixuan-content .money input {
   font-size: 27px;
   font-weight: bold;
-  padding: 7px;
+  padding: 20px 7px 15px;
   background: #fff;
   text-align: center;
   border-bottom:1px dashed #5A5B65;
@@ -103,46 +103,69 @@
   justify-content: space-between;
 }
 
-.multiple-div div {
-  width: 160px;
-  height: 76px;
+.multiple-div .multiple-item {
+  width: 327px;
+  height: 198px;
   border-radius: 2px;
   margin-bottom: 6px;
   padding: 13px 0;
   box-sizing: border-box;
+  margin: 0 auto;
+
+  color: #F05330;
+  background: url(../../assets/images/deposit_bg.png);
+  background-size: 100%;
+  padding: 28px;
 }
 
-.multiple-div div .multiple-box {
-  float: left;
-  display: block;
-  width: 62px;
-  line-height: 50px;
+.multiple-div .multiple-item .title {
+  line-height: 24px;
   text-align: center;
-  border-right: solid 1px #f6f6f6;
-  font-weight: bold;
-  font-size: 23px;
-  margin-right: 11px;
-}
-
-.multiple-div div .multiple-box .several-times {
-  display: inline;
-  font-weight: 100;
+  color: #FFFFFF;
   font-size: 15px;
 }
 
-.multiple-div div p {
-  margin: 7px 0 6px 0;
+.multiple-div .multiple-item .multiple-box {
+  float: left;
+  display: block;
+  width: 134px;
+  line-height: 50px;
+  text-align: center;
+  border-right: solid 1px #F2F2F2;
+  font-weight: bold;
+  font-size: 40px;
+  margin: 33px 30px 33px 0;
+}
+
+.multiple-div .multiple-item .multiple-box .several-times {
+  display: inline;
+  margin-left: 5px;
+  font-weight: 100;
+  font-size: 18px;
+  color: #333333;
+  position: relative;
+  top: -8px;
+}
+
+.multiple-div .multiple-item p {
+  margin: 37px 0 0 0;
   color: #999999;
-  font-size: 11px;
+  font-size: 15px;
+}
+
+.multiple-div .multiple-item p:nth-of-type(2) {
+  margin: 4px 0 0 0;
+}
+
+.multiple-div .multiple-item p .multiple-unit {
+  color: #333333;
 }
 
 .multiple-div .multiple-active {
   color: #F05330;
-  background: #f2f2f2;
-}
-
-.multiple-div .multiple-active .multiple-box {
-  border: none;
+  background: url(../../assets/images/deposit_bg.png);
+  background-size: 100%;
+  padding: 28px;
 }
 
 .multiple-div .multiple-active p{
