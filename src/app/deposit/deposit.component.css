@@ -1,0 +1,243 @@
+.strategy-tabs {
+  background: #fff;
+  justify-content: space-around;
+  overflow: hidden;
+}
+
+.strategy-tabs>div {
+  width: 28.8%;
+  float: left;
+  text-align: center;
+  border-radius: 5px;
+  height: 110px;
+  margin-left: 13px;
+}
+
+.strategy-tabs>div .num {
+  font-size: 11px;
+  margin-top: 11px;
+  margin-bottom: 12px;
+}
+
+.strategy-tabs>div .interest {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.strategy-tabs>div .amount-num {
+  font-size: 13px;
+}
+
+.zixuan-content {
+  background: #fff;
+  padding-top: 6px;
+}
+
+.zixuan-content .tabs2 {
+  display: flex;
+  font-size: 1.1rem;
+}
+
+.zixuan-content .tabs2 div {
+  flex: 1;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  color:#999999;
+}
+
+.zixuan-content .tabs2 .tabs2-active {
+  color: #5473FF;
+  position: relative;
+  /* border-bottom: solid 1px; */
+}
+
+.tabs2-active::after {
+  display: block;
+  content: "—";
+  color: #5473FF;
+  font-weight: bold;
+  position: absolute;
+  bottom:-14px;
+  left:85px;
+}
+
+.zixuan-content .money {
+  text-align: center;
+  padding: 5px 10px;
+  margin: 15px;
+  margin-top: 0;
+}
+
+.zixuan-content .money p {
+  font-size:15px;
+  color:#5A5B65;
+}
+
+.zixuan-content .money input {
+  font-size: 27px;
+  font-weight: bold;
+  padding: 7px;
+  background: #fff;
+  text-align: center;
+  border-bottom:1px dashed #5A5B65;
+  border-top:none;
+  border-left:none;
+  border-right:none;
+  outline:none;
+  color:#F05330;
+  width:248px;
+}
+
+.p-first {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 1.1rem;
+  color:#5A5B65;
+}
+
+.multiple-div {
+  padding: 15px 20px;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+}
+
+.multiple-div div {
+  width: 160px;
+  height: 76px;
+  border-radius: 2px;
+  margin-bottom: 6px;
+  padding: 13px 0;
+  box-sizing: border-box;
+}
+
+.multiple-div div .multiple-box {
+  float: left;
+  display: block;
+  width: 62px;
+  line-height: 50px;
+  text-align: center;
+  border-right: solid 1px #f6f6f6;
+  font-weight: bold;
+  font-size: 23px;
+  margin-right: 11px;
+}
+
+.multiple-div div .multiple-box .several-times {
+  display: inline;
+  font-weight: 100;
+  font-size: 15px;
+}
+
+.multiple-div div p {
+  margin: 7px 0 6px 0;
+  color: #999999;
+  font-size: 11px;
+}
+
+.multiple-div .multiple-active {
+  color: #F05330;
+  background: #f2f2f2;
+}
+
+.multiple-div .multiple-active .multiple-box {
+  border: none;
+}
+
+.multiple-div .multiple-active p{
+  color: #F05330;
+}
+
+.tabs .icon {
+  background: url(../../assets/images/tabsIcon.png) no-repeat;
+  width: 30px;
+  height: 30px;
+  background-size: 100% 300%;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.zzf {
+  background-position-y: -30px !important;
+}
+
+.yyz {
+  background-position-y: -60px !important;
+}
+
+.tabsbox {
+  background-color: #CBCBCB;
+  color: #ffffff;
+}
+
+.tabsActive {
+  background-color: #F05330;
+  color: #fff;
+}
+
+.tabsActive .icon {
+  background: url(../../assets/images/tabsIcon2.png) no-repeat;
+  background-size: 100% 300%;
+}
+
+.tabs p {
+  margin: 10px;
+  font-size: 1.1rem;
+}
+
+.submit {
+  display: block;
+  width: 90vw;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  background: #5473FF;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  margin: 0 auto;
+}
+
+.tab-content {
+  height: calc(100vh - 216px);
+  overflow-y: auto;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.flex-btn {
+  display: flex;
+  position: relative;
+  left:50%;
+  width:202px;
+  margin-left:-101px;
+}
+
+.flex-btn button {
+  width:101px;
+  height: 26px;
+  font-size:15px;
+  color: #fff;
+  border: none;
+  background-repeat: no-repeat;
+  background-color:transparent;
+  background-size:101px 26px;
+}
+.flex-btn button:first-child {
+  background-image: url('../../assets/images/first-btn.png');
+} 
+.flex-btn button:last-child {
+  background-image: url('../../assets/images/last-btn.png');
+}
+
+.guge {
+  height: calc(100vh - 116px);
+}
+
+.singleDiv div {
+  width: 55% !important;
+  text-align: center;
+  margin: auto !important;
+}

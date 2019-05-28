@@ -1,0 +1,13 @@
+<div class="navigation">
+  交易
+</div>
+<div class="menuList">
+  <div *ngFor='let a of menuList' class="footer-div {{url === a.id?'footer-div-active':''}}" (click)='goto(a.id)'>
+    <p>
+      {{a.name}}
+    </p>
+  </div>
+</div>
+<div class="content">
+  <router-outlet></router-outlet>
+</div>

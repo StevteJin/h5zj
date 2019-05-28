@@ -1,0 +1,81 @@
+<div class="user-center-top">
+  <div class="user-center-header">
+    <div class="user-name">{{userInfo.accountName}}</div>
+    <div class="logout-box" (click)='logout()'>退出账户</div>
+  </div>
+  <div class="funds-container">
+    <div class="total-assets">
+      <div class="title">总资产</div>
+      <div class="in-out">
+        <span (click)='goto2(menuList[2].id)'>入金</span>
+        <span (click)='goto2(menuList[3].id)'>出金</span>
+      </div>
+    </div>
+    <div class="total-assets-amount">{{userInfo.totalScale | round4}}</div>
+    <div class="funds-list">
+      <div class="funds-item">
+        <div>持仓权益</div>
+        <div class="funds-amount">{{userInfo.stockScale | round4}}</div>
+      </div>
+      <div class="funds-item">
+        <div>冻结资金</div>
+        <div class="funds-amount">{{freezaFee | round4}}</div>
+      </div>
+      <div class="funds-item">
+        <div>可用资金</div>
+        <div class="funds-amount">{{userInfo.ableScale | round4}}</div>
+      </div>
+      <div class="funds-item">
+        <div>实际可用</div>
+        <div class="funds-amount">{{userInfo.limitAbleScale | round4}}</div>
+      </div>
+      <div class="funds-item">
+        <div>初期规模</div>
+        <div class="funds-amount">{{userInfo.allottedScale | round4}}</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="account-balance">
+  <div class="account-balance-top">
+    <div class="title">
+      <span>账户余额</span>
+      <span class="balance">{{userInfo.balance | round4}}</span>
+    </div>
+    <div class="funds-operate">
+      <div (click)='goto2(menuList[1].id)'>充值</div>
+      <div (click)='goto2(menuList[0].id)'>提现</div>
+      <!-- <img src="./assets/images/userCenter/recharge.png" />
+      <img src="./assets/images/userCenter/withdraw.png" /> -->
+    </div>
+  </div>
+</div>
+<div class="user-center-bottom">
+  <div class="box box1">
+    <div (click)='userDetail()'>
+      <img src="./assets/images/userCenter/financing _details.png" />
+      <div>个人详情</div>
+    </div>
+    <div (click)='goto2(menuList[4].id)'>
+      <img src="./assets/images/userCenter/capital_flow.png" />
+      <div>资金流水</div>
+    </div>
+    <div (click)='goto1("card")'>
+      <img src="./assets/images/userCenter/bank_card.png" />
+      <div>银行卡修改</div>
+    </div>
+  </div>
+  <div class="box box2">
+    <div *ngIf="allottedScale !== '0'" (click)='submit()'>
+      <img src="./assets/images/userCenter/close_case.png" />
+      <div>结案</div>
+    </div>
+    <div (click)='goto1("resetPwd")'>
+      <img src="./assets/images/userCenter/change_pwd.png" />
+      <div>修改密码</div>
+    </div>
+    <div></div>
+  </div>
+</div>
+
+

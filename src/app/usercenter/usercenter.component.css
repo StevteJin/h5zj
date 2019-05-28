@@ -1,0 +1,152 @@
+.user-center-top {
+  width: 100%;
+  height: 254px;
+  background: #fff url('../../assets/images/userCenter/bg.png') no-repeat;
+  background-size: 100% 205px;
+}
+.user-center-header {
+  overflow: hidden;
+  padding: 0 26px 0 37px;
+  line-height: 40px;
+  font-size: 12px;
+  color: #FFFFFF;
+}
+.user-name {
+  float: left;
+}
+.logout-box {
+  float: right;
+}
+.funds-container {
+  width: 355px;
+  height: 214px;
+  margin: 0 auto;
+  background-image: url('../../assets/images/userCenter/bg1.png');
+  background-size: 100% 100%;
+  padding: 21px 25px 0;
+  box-sizing: border-box;
+}
+.funds-container .total-assets {
+  line-height: 25px;
+  overflow: hidden;
+}
+.funds-container .total-assets .title {
+  float: left;
+  color: #5A5B65;
+  font-size: 15px;
+}
+.funds-container .total-assets .in-out {
+  float: right;
+}
+.funds-container .total-assets .in-out span {
+  display: inline-block;
+  height: 25px;
+  margin-left: 12px;
+  font-weight: bold;
+  color: #5473FF;
+  font-size: 12px;
+  text-decoration: underline;
+}
+.funds-container .total-assets-amount {
+  font-weight: bold;
+  color: #F05330;
+  font-size: 23px;
+  margin-bottom: 23px;
+}
+.funds-container .funds-list {
+  overflow: hidden;
+}
+.funds-container .funds-list .funds-item {
+  float: left;
+  width: 77px;
+  margin: 0 35px 12px 0;
+  color: #8E9399;
+  font-size: 12px;
+}
+.funds-container .funds-list .funds-item:nth-child(3n) {
+  margin-right: 0;
+}
+.funds-container .funds-list .funds-amount {
+  font-weight: bold;
+  color: #5A5B65;
+  font-size: 14px;
+}
+.account-balance {
+  width: 100%;
+  height: 57px;
+  background-color: #fff;
+  margin-bottom: 6px;
+}
+.account-balance-top {
+  height: 22px;
+  line-height: 22px;
+  padding: 14px 16px 0;
+}
+.account-balance-top .title {
+  float: left;
+  color: #999999;
+  font-size: 12px;
+}
+.account-balance-top .balance {
+  display: inline-block;
+  margin-left: 18px;
+  font-weight: bold;
+  color: #F05330;
+  font-size: 15px;
+}
+.account-balance-top .funds-operate {
+  float: right;
+}
+.account-balance-top .funds-operate div {
+  float: left;
+  width: 38px;
+  height: 22px;
+  line-height: 22px;
+  text-align: center;
+  background-color: #5473FF;
+  border-radius: 2px;
+  margin-left: 8px;
+  color: #fff;
+  font-size: 12px;
+}
+.user-center-bottom {
+  width: 100%;
+  color: #666666;
+  font-size: 12px;
+}
+.user-center-bottom .box1{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.user-center-bottom .box2{
+  display: flex;
+  flex-wrap: wrap;
+}
+.user-center-bottom .box1 >div {
+  width: 33.1%;
+  height: 85px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1px;
+}
+.user-center-bottom .box2 >div {
+  width: 33.14%;
+  height: 85px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right:1px;
+}
+.user-center-bottom .box2 >div:last-child{
+  margin-right:0px;
+}
+.user-center-bottom  img {
+  width: 30px;
+  margin-bottom: 4px;
+}
