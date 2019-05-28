@@ -63,6 +63,7 @@ export class UsercenterComponent implements OnInit, OnDestroy {
   }
 
   usercenter() {
+    console.log("usercenter>>")
     this.http.userCenter().subscribe((res: DataService['userInfo']) => {
       this.userInfo = res;
       const backscale = res['balance'];

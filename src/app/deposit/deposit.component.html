@@ -41,7 +41,7 @@
     <!-- <p class='p-first'>
       请选择杠杆
     </p> -->
-    <div class='multiple-div {{detail.length == 1?"singleDiv":""}}'>
+    <div class='multiple-div'>
       <ng-container *ngFor="let item of detail">
         <div *ngIf="item.mul == 3" (click)='goto(item.id,item.mul,item.financeFeeRate)' class="multiple-item" [ngClass]="mulType == item.mul?'multiple-active':''">
           <div class="title">放大倍数</div>

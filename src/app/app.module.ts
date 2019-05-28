@@ -63,7 +63,7 @@ const appChildRoutes: Routes = [
   { path: 'ssgp', component: SsgpComponent },
   { path: 'zixuan', component: ZixuanComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'signup', component: SignupComponent },
+  { path: 'signup', component: IndexComponent },
   { path: 'forget', component: SignupComponent },
   { path: 'jiaoyi', component: JiaoyiComponent, children: jiaoyiChildRoutes },
   { path: '', redirectTo: 'index', pathMatch: 'full' }
