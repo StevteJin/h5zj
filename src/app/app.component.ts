@@ -26,7 +26,7 @@ export class AppComponent implements DoCheck, OnInit {
       this.data.token = this.data.randomString(32);
       this.data.setLocalStorage('token', this.data.token);
     }
-    this.connect();
+    // this.connect();
   }
 
   /**
@@ -106,7 +106,7 @@ export class AppComponent implements DoCheck, OnInit {
       this.data.isConnect = true;
       if (this.data.getLocalStorage('token') !== this.data.getToken()) {
         this.data.setLocalStorage('token', this.data.token);
-        this.connectWs();
+        // this.connectWs();
       }
     }
 
