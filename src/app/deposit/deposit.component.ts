@@ -102,7 +102,7 @@ export class DepositComponent implements OnInit, OnDestroy {
       }
       this.finance();
       if (this.userInfo.allottedScale === '0') {
-        this.mulType = this.detail[3].mul;
+        this.mulType = this.detail[0].mul;
       } else {
         this.mulType = this.userInfo.financeRatio;
       }
@@ -118,7 +118,7 @@ export class DepositComponent implements OnInit, OnDestroy {
     this.financeData.forEach((element, index) => {
       this.detail.push({ id: index, mul: element['financeRatio'], financeFeeRate: element['financeFeeRate'] });
     });
-    this.mulType = this.detail[3].mul;
+    this.mulType = this.detail[0].mul;
   }
 
 
