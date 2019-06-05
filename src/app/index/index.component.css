@@ -1,3 +1,7 @@
+.index-page {
+    background-color: #fff;
+}
+
 .content-title {
     font-size: .9rem;
     width: 60%;
@@ -32,7 +36,7 @@
 .topbanner {
     width: 100%;
     background-color: #ffffff;
-    margin-bottom: 5px;
+    border-bottom: 5px solid rgb(246, 246, 246);
 }
 
 .topbanner img {
@@ -244,7 +248,7 @@
     padding-top: 15px;
     padding-bottom: 15px;
     background: #fff;
-    margin-bottom: 5px;
+    border-bottom: 5px solid rgb(246, 246, 246);
 }
 
 .tabs .tabs-div2 {
