@@ -56,27 +56,30 @@
             <img src="./assets/images/huo.png" alt="">
             <span>重磅资讯：</span>
         </div>
-        <div class="news-content" *ngFor="let item of newslist" (click)='goto2(item.id)'>
-            <p class="content-title">
-                {{item.title}}
-            </p>
-            <p class="content-info">
-                <span>
-          {{item.createTime}}
-        </span>
-            </p>
+        <div class="newsbox">
+            <!-- <div class="news-content" *ngFor="let item of newslist" (click)='goto2(item.id)'> -->
+            <div class="news-content" *ngFor="let item of newslist">
+                <p class="content-title">
+                    {{item.title}}
+                </p>
+                <p class="content-info">
+                    <span>
+                        {{item.createTime}}
+                    </span>
+                </p>
+            </div>
         </div>
     </div>
     <div class="new-zixun">
-        <div class="zixun-box" *ngFor="let item of detail">
-            <img class="bgbanner" src="{{item.img}}" alt="">
+        <!-- <div class="zixun-box" *ngFor="let item of detail">
             <div class="zixun-content1">
-                <div class="zixun1">我要操盘!</div>
+                <div class="zixun1">我要操盘</div>
                 <div class="zixun2"><span>{{item.amount}}</span>元起</div>
                 <div class="{{item.btns}}" (click)='goto(item.id)'>
                     立即申请
                 </div>
             </div>
-        </div>
+        </div> -->
+        <img src="./assets/images/bottombanner.png" alt="">
     </div>
 </div>
