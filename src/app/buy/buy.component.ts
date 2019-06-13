@@ -1,4 +1,4 @@
-import { Component, DoCheck, OnDestroy } from '@angular/core';
+import { Component, DoCheck, OnDestroy, OnInit } from '@angular/core';
 import { DataService, StockList } from '../data.service';
 import { HttpService } from '../http.service';
 import { Response } from '@angular/http';
@@ -6,6 +6,9 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
 declare var StockChart: any;
 declare var EmchartsMobileTime: any;
 declare var EmchartsMobileK: any;
+
+declare var layer: any;
+import * as $ from 'jquery';
 @Component({
     selector: 'app-buy',
     templateUrl: './buy.component.html',
@@ -28,7 +31,7 @@ declare var EmchartsMobileK: any;
         ])
     ]
 })
-export class BuyComponent implements DoCheck, OnDestroy {
+export class BuyComponent implements DoCheck, OnDestroy, OnInit {
     text: string;
     text2: string;
     classType: string;
@@ -116,6 +119,24 @@ export class BuyComponent implements DoCheck, OnDestroy {
             // tslint:disable-next-line:max-line-length
             return Math.round((fee + this.appointPrice * this.appointCnt * 0.00002 + this.appointPrice * this.appointCnt * 0.001) * 100) / 100;
         }
+    }
+
+    ngOnInit() {
+        var oHeight = $(document).height();
+        // 在adnroid中如何监听软键盘的弹起与收起
+        $(window).resize(function(){ //ios软键盘弹出不会触发resize事件
+            if($(document).height() < oHeight){
+                // 当软键盘弹起，在此处操作
+                $("#search-div").css("position","absolute");
+                $("#search-div").css("bottom","-265px");
+                $("#footer1").css("position","static");
+            }else{
+                // 当软键盘收起，在此处操作
+                $("#search-div").css("position","absolute"); //adsolute或fixed，看你布局
+                $("#search-div").css("bottom","0px");
+                $("#footer1").css("position","fixed");
+            }
+        });
     }
 
     ngDoCheck() {

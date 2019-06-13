@@ -106,7 +106,7 @@
     </p>
   </div>
 </div>
-<div class="search-div" [@showDelete]="show">
+<div class="search-div" [@showDelete]="show" id="search-div">
   <div (click)='selectGP(a)' *ngFor='let a of list'>
     <div>
       <span>{{a.stockCode}}</span>
