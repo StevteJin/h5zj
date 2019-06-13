@@ -105,7 +105,7 @@ export class ChartComponent implements OnInit, DoCheck, OnDestroy {
     const chart = new EmchartsMobileK({
       container: 'chart',
       type: this.chartType,
-      code:'SC2103_INE',
+      code:`${this.stockCode}${marketType}`,
       width: document.body.clientWidth,
       height: 200,
       dpr: 2,
@@ -124,7 +124,7 @@ export class ChartComponent implements OnInit, DoCheck, OnDestroy {
     const chart = new EmchartsMobileTime({
       container: 'chart',
       type: this.chartType,
-      code: 'SC2103_INE',
+      code: `${this.stockCode}${marketType}`,
       width: document.body.clientWidth,
       height: 180,
       dpr: 2
